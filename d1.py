@@ -2,7 +2,7 @@ import re
 
 def part_one():
 
-    with open(file="in.txt") as f:
+    with open(file="d1input.txt") as f:
         final_sum = 0
         lines = f.read().splitlines()
         for line in lines:
@@ -24,7 +24,7 @@ def part_two():
             return str(digit_words.index(x) + 1)
         return x
 
-    for line in open("in.txt").read().splitlines():
+    for line in open("d1input.txt").read().splitlines():
         digits = [*map(helper_func, re.findall(pattern, line))]
         final_sum += int(digits[0] + digits[-1])
 
